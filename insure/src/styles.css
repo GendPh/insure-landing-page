@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .font-karla {
+    font-family: 'Karla', sans-serif;
+  }
+
+  .font-dm-serif {
+    font-family: 'DM Serif Display', serif;
+  }
+
+  .btn {
+    @apply border-[1.5px]  uppercase text-[13px] tracking-[1.5px] font-bold font-karla py-[13px] px-7 transition-colors duration-300 bg-transparent;
+    &.primary {
+      @apply border-twilight text-twilight hover:bg-twilight hover:text-white;
+    }
+    &.secondary {
+      @apply border-white text-white hover:bg-white hover:text-twilight;
+    }
+  }
+
+  #toggle-nav {
+    @apply w-8;
+  }
+}
