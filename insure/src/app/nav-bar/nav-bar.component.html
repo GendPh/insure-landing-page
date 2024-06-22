@@ -7,7 +7,17 @@
     </svg>
   </figure>
 
+  <nav id="primary-nav">
+    <ul>
+      <li (click)="closeNav()">how we work</li>
+      <li (click)="closeNav()">blog</li>
+      <li (click)="closeNav()">account</li>
+    </ul>
+    <button class="btn primary">view plans</button>
+  </nav>
+
   <button id="toggle-nav" (click)="toggleNav()" #navBtn></button>
+
 </header>
 
 <nav id="mobile-nav" #navMenu>

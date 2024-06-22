@@ -56,9 +56,18 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    @apply w-8 aspect-square cursor-pointer active:scale-95 transition-all duration-300;
+    @apply w-8 aspect-square cursor-pointer active:scale-95 transition-all duration-300 md:hidden;
     &.open {
       background-image: url('assets/images/nav/icon-close.svg');
+    }
+  }
+  #primary-nav {
+    @apply flex items-center gap-[33px];
+    ul {
+      @apply hidden md:flex gap-[26px] items-center text-[13px] font-bold font-karla tracking-[1.5px] uppercase;
+      li {
+        @apply text-mist transition-colors duration-300 hover:text-twilight;
+      }
     }
   }
   #mobile-nav {
