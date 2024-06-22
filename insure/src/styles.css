@@ -4,17 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .h1 {
+    @apply text-[48px] leading-[48px] font-normal font-dm-serif tracking-[-0.67px];
+  }
+  h3 {
+    @apply text-[28px] font-normal font-dm-serif tracking-[-0.39px];
+  }
+  svg:hover path {
+    @apply transition-colors duration-300 fill-twilight;
+  }
+}
+
 @layer components {
   .font-karla {
     font-family: 'Karla', sans-serif;
   }
-
   .font-dm-serif {
     font-family: 'DM Serif Display', serif;
   }
-
   .btn {
-    @apply border-[1.5px]  uppercase text-[13px] tracking-[1.5px] font-bold font-karla py-[13px] px-7 transition-colors duration-300 bg-transparent;
+    @apply border-[1.5px] uppercase text-[13px] tracking-[1.5px] font-bold font-karla py-[13px] px-10 transition-colors duration-300 bg-transparent;
     &.primary {
       @apply border-twilight text-twilight hover:bg-twilight hover:text-white;
     }
@@ -22,8 +32,54 @@
       @apply border-white text-white hover:bg-white hover:text-twilight;
     }
   }
+  .description {
+    @apply text-[16px] leading-[26px] font-normal font-karla;
+  }
+  .img-mobile {
+    @apply md:hidden;
+  }
+  .img-tablet {
+    @apply hidden md:block;
+  }
+  .line {
+    @apply w-full h-[1px];
+    &.pink {
+      @apply bg-[#C396C6];
+    }
+    &.gray {
+      @apply bg-[#DADADA];
+    }
+  }
 
   #toggle-nav {
-    @apply w-8;
+    background-image: url('assets/images/nav/icon-hamburger.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @apply w-8 aspect-square cursor-pointer active:scale-95 transition-all duration-300;
+    &.open {
+      background-image: url('assets/images/nav/icon-close.svg');
+    }
+  }
+  #mobile-nav {
+    @apply fixed z-40 bg-twilight text-white w-full h-full flex items-center flex-col gap-6 py-10 px-6 pointer-events-none -translate-y-10 transition-all duration-150 opacity-0;
+    &.open {
+      @apply pointer-events-auto translate-y-0 opacity-100;
+    }
+    ul {
+      @apply flex flex-col items-center gap-6 text-[20px] leading-[40px] font-bold font-karla tracking-[1.36px] uppercase;
+    }
+    .btn {
+      @apply w-full;
+    }
+    img {
+      @apply absolute bottom-20 left-0 w-full pointer-events-none;
+    }
+  }
+  footer ul {
+    @apply flex flex-col items-center text-[13px] tracking-[1.5px] font-bold font-karla gap-4 uppercase text-dusk;
+    li:first-child {
+      @apply text-mist mb-5;
+    }
   }
 }

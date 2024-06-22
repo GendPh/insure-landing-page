@@ -1,4 +1,4 @@
-<header class="sticky top-0 flex justify-between">
+<header class="sticky top-0 flex justify-between items-center px-6 py-[31px] bg-white z-50">
 
   <figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="112" height="18">
@@ -7,5 +7,15 @@
     </svg>
   </figure>
 
-  <button id="toggle-nav"></button>
+  <button id="toggle-nav" (click)="toggleNav()" #navBtn></button>
 </header>
+
+<nav id="mobile-nav" #navMenu>
+  <ul>
+    <li (click)="closeNav()">how we work</li>
+    <li (click)="closeNav()">blog</li>
+    <li (click)="closeNav()">account</li>
+  </ul>
+  <button class="btn secondary">view plans</button>
+  <img src="../../assets/images/nav/bg-pattern-mobile-nav.svg" alt="lines background nav bar mobile">
+</nav>
