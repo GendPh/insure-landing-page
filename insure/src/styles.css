@@ -102,8 +102,14 @@
 
   footer ul {
     @apply md:w-full flex flex-col items-center justify-start md:items-start text-[13px] tracking-[1.5px] font-bold font-karla gap-4 uppercase text-dusk;
-    li:first-child {
-      @apply text-mist mb-5;
+
+    li {
+      &:first-child {
+        @apply text-mist mb-5;
+      }
+      &:not(:first-child) {
+        @apply cursor-pointer hover:underline underline-offset-4;
+      }
     }
   }
 }
