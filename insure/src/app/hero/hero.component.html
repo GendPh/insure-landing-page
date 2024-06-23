@@ -1,17 +1,32 @@
-<section class="bg-dusk text-white relative">
-  <figure>
-    <img src="../../assets/images/hero/image-intro-mobile.jpg" alt="family together" class="w-full">
-  </figure>
+<section class="bg-dusk md:bg-transparent text-white relative" id="hero">
 
-  <article class="px-6 py-[96px] text-center">
-    <h1 class="h1">Humanizing your insurance.</h1>
-    <p class="description mt-4 mb-8">
-      Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the
-      plan that’s right for you. Ensure you and your loved ones are protected.
-    </p>
-    <button class="btn secondary">view plans</button>
-  </article>
+  <div class="grid md:grid-cols-2 md:gap-[30px] desktop-screen relative z-10">
+    <figure class="row-start-1 md:col-start-2 md:py-[96px] md:pr-6">
+      <img src="../../assets/images/hero/image-intro-mobile.jpg" alt="family together" class="w-full img-mobile">
+      <img src="../../assets/images/hero/image-intro-desktop.jpg" alt="family together" class="w-full img-tablet">
+    </figure>
+
+    <article class="px-6 py-[96px] text-center md:text-start">
+
+      <div class="hidden md:block line gray max-w-[150px] md:mb-[63px]"></div>
+
+      <h1>Humanizing your insurance.</h1>
+
+      <p class="description mt-4 mb-8">
+        Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the
+        plan that’s right for you. Ensure you and your loved ones are protected.
+      </p>
+      <button class="btn secondary">view plans</button>
+    </article>
+  </div>
 
   <img src="../../assets/images/hero/bg-pattern-hero-right-mobile.svg" alt="lines svg"
-    class="img-mobile absolute right-0 bottom-[-19%]">
+    class="img-mobile absolute right-0 z-10 bottom-[-19%]">
+
+  <img src="../../assets/images/hero/bg-pattern-hero-left-desktop.svg" alt="lines svg"
+    class="img-tablet absolute z-10 bottom-[-25%] lg:bottom-[-15%] w-[15%] lg:w-auto left-0">
+
+  <img src="../../assets/images/hero/bg-pattern-hero-right-desktop.svg" alt="lines svg"
+    class="img-tablet absolute top-0 right-0 w-[35%] z-10 lg:w-auto">
+
 </section>

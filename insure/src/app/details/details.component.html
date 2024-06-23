@@ -1,8 +1,9 @@
-<section class="px-6 mt-[140px] text-center">
-  <div class="line pink max-w-[150px] mx-auto mb-10"></div>
+<section class="px-6 mt-[140px] text-center md:text-start desktop-screen">
+  <div class="line pink max-w-[150px] mx-auto md:ml-0 mb-10"></div>
+
   <h2 class="h1">We're different</h2>
 
-  <article class="mt-20 grid gap-14">
+  <article class="mt-20 grid gap-14 md:grid-cols-3">
     @for (item of details; track $index) {
     <app-details-container [Detail]="item.detail" [Description]="item.description" [Image]="item.image" />
     }
